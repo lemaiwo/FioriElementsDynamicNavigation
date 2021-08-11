@@ -15,10 +15,10 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "processor/",
+        "uri": "v2/processor/",
         "type": "OData",
         "settings": {
-          "odataVersion": "4.0"
+          "odataVersion": "2.0"
         }
       }
     },
@@ -85,26 +85,18 @@
         }
       }
     },
-    "routing": {
-      "routes": [
-        {
-          "pattern": ":?query:",
-          "name": "TravelList",
-          "target": "TravelList"
-        },
-        {
-          "pattern": "Travel({key}):?query:",
-          "name": "TravelObjectPage",
-          "target": "TravelObjectPage"
-        },
-        {
-          "pattern": "Travel({key})/to_Booking({key2}):?query:",
-          "name": "BookingObjectPage",
-          "target": "BookingObjectPage"
-        }
-      ],
-      "targets": {
-        "TravelList": {
+    "extends": {
+			"extensions": {
+				"sap.ui.controllerExtensions": {
+					"sap.suite.ui.generic.template.ListReport.view.ListReport": {
+						"controllerName": "sap.fe.cap.travel.ext.controller.ListReportExt"
+					}
+				}
+			}
+		},
+    "sap.ui.generic.app": {
+      "pages": {
+        "ListReport|TravelList": {
           "type": "Component",
           "id": "TravelList",
           "name": "sap.fe.templates.ListReport",

@@ -3,8 +3,8 @@
   "authenticationMethod": "route",
   "routes": [
     {
-      "source": "^/processor/(.*)$",
-      "target": "/processor/$1",
+      "source": "^/v2/processor/(.*)$",
+      "target": "/v2/processor/$1",
       "destination": "odata-services",
       "authenticationType": "xsuaa",
       "csrfProtection": false

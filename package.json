@@ -5,10 +5,11 @@
   "repository": "https://github.com/SAP-samples/cap-sflight",
   "dependencies": {
     "@sap/cds": "^5.1",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.7.9",
     "express": "^4"
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.84",
+    "@sap/ux-specification": "^1.90.6",
     "chai": "^4.3.0",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
@@ -34,7 +35,8 @@
     }
   },
   "sapux": [
-    "app/travel_processor"
+    "app/travel_processor",
+    "app/project1"
   ],
   "jest": {
     "testEnvironment": "node"
