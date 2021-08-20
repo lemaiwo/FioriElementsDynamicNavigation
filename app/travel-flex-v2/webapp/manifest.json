@@ -1,7 +1,7 @@
 {
-    "_version": "1.32.0",
+    "_version": "1.17.0",
     "sap.app": {
-        "id": "be.wl.travelv2",
+        "id": "travelflexv2",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -36,21 +36,6 @@
         "sourceTemplate": {
             "id": "ui5template.smartTemplate",
             "version": "1.40.12"
-        },
-        "crossNavigation": {
-            "inbounds": {
-                "travel-inbound": {
-                    "signature": {
-                        "parameters": {},
-                        "additionalParameters": "allowed"
-                    },
-                    "semanticObject": "travel",
-                    "action": "process2",
-                    "title": "Process Travels2",
-                    "subTitle": "Process travels",
-                    "icon": "sap-icon://flight"
-                }
-            }
         }
     },
     "sap.ui": {
@@ -132,7 +117,7 @@
             "extensions": {
                 "sap.ui.controllerExtensions": {
                     "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                        "controllerName": "be.wl.travelv2.ext.controller.ListReportExt"
+                        "controllerName": "travelflexv2.ext.controller.ListReportExt"
                     }
                 }
             }

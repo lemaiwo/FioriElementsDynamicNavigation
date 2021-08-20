@@ -36,7 +36,7 @@
   },
   "sapux": [
     "app/travel_processor",
-    "app/project1"
+    "app/travelv2"
   ],
   "jest": {
     "testEnvironment": "node"
