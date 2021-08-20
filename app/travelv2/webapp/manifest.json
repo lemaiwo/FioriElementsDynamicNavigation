@@ -174,24 +174,27 @@
                 "pages": {
                     "ObjectPage|Travel": {
                         "entitySet": "Travel",
-                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                        "defaultLayoutType": "TwoColumnsMidExpanded",
+                        "defaultLayoutTypeIfExternalNavigation": "TwoColumnsMidExpanded",
                         "component": {
                             "name": "sap.suite.ui.generic.template.ObjectPage"
                         },
                         "pages": {
                             "ObjectPage|to_Booking": {
                                 "entitySet": "Booking",
-                                "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                                "defaultLayoutType": "ThreeColumnsEndExpanded",
+                                "defaultLayoutTypeIfExternalNavigation": "ThreeColumnsEndExpanded",
                                 "component": {
                                     "name": "sap.suite.ui.generic.template.ObjectPage"
                                 }
                             }
                         }
                     },
-                    "ObjectPage|to_Booking": {
-                        "navigationProperty": "to_Booking",
-                        "entitySet": "Booking",
-                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                    "ObjectPage|to_Demo": {
+                        "navigationProperty": "to_Demo",
+                        "entitySet": "Demo",
+                        "defaultLayoutType": "TwoColumnsMidExpanded",
+                        "defaultLayoutTypeIfExternalNavigation": "TwoColumnsMidExpanded",
                         "component": {
                             "name": "sap.suite.ui.generic.template.ObjectPage"
                         }

@@ -12,7 +12,7 @@ sap.ui.define([
             let navigationProperty;
             switch (object.TravelID) {
                 case 4131:
-                    navigationProperty = "to_Booking(BookingUUID='36997221A8E4645C17002DF03754AB66',IsActiveEntity=true)";
+                    navigationProperty = "to_Demo(BookingUUID='36997221A8E4645C17002DF03754AB66',IsActiveEntity=true)";
                     break;
             }
             if (navigationProperty) {

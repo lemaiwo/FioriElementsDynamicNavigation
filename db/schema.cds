@@ -22,6 +22,7 @@ entity Travel : managed {
   to_Agency      : Association to TravelAgency;
   to_Customer    : Association to Passenger;
   to_Booking     : Composition of many Booking on to_Booking.to_Travel = $self;
+  to_Demo     : Composition of many Demo on to_Demo.to_Travel = $self;
 };
 
 entity Booking : managed {
@@ -41,7 +42,7 @@ entity Booking : managed {
                                             and to_Flight.FlightDate = FlightDate
                                             and to_Flight.ConnectionID = ConnectionID;
 };
-
+entity Demo as projection on Booking;
 entity BookingSupplement : managed {
   key BookSupplUUID   : UUID;
   BookingSupplementID : Integer @Core.Computed;

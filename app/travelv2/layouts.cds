@@ -123,6 +123,57 @@ annotate TravelService.Booking with @UI : {
   ]},
 };
 
+annotate TravelService.Demo with @UI : {
+  Identification : [
+    { Value : BookingID },
+  ],
+  HeaderInfo : {
+    TypeName       : '{i18n>Bookings}',
+    TypeNamePlural : '{i18n>Bookings}',
+    Title          : { Value : BookingID }
+  },
+  PresentationVariant : {
+    Text           : 'Default',
+    Visualizations : ['@UI.LineItem']
+  },
+  SelectionFields : [],
+  LineItem : [
+    { Value : BookingID,             Label : '{i18n>BookingNumber}' },
+    { Value : BookingDate            },
+    { Value : to_Customer_CustomerID },
+    { Value : to_Carrier_AirlineID   },
+    { Value : ConnectionID,          Label : '{i18n>FlightNumber}' },
+    { Value : FlightDate             },
+    { Value : FlightPrice            },
+    { Value : BookingStatus_code     }
+  ],
+  Facets : [{
+    $Type  : 'UI.CollectionFacet',
+    Label  : '{i18n>Booking}',
+    ID     : 'Booking',
+    Facets : [{  // booking details
+      $Type  : 'UI.ReferenceFacet',
+      ID     : 'BookingData',
+      Target : '@UI.FieldGroup#BookingData',
+      Label  : 'Booking'
+    }]
+  }, {  // supplements list
+    $Type  : 'UI.ReferenceFacet',
+    Target : 'to_BookSupplement/@UI.LineItem',
+    Label  : '{i18n>BookingSupplement}'
+  }],
+  FieldGroup #BookingData : { Data : [
+    { Value : BookingID              },
+    { Value : BookingDate,           },
+    { Value : to_Customer_CustomerID },
+    { Value : to_Carrier_AirlineID   },
+    { Value : ConnectionID           },
+    { Value : FlightDate             },
+    { Value : FlightPrice            },
+    { Value : BookingStatus_code     }
+  ]},
+};
+
 annotate TravelService.BookingSupplement with @UI : {
   Identification : [
     { Value : BookingSupplementID }

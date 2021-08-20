@@ -166,7 +166,7 @@
                         "pages": {
                             "ObjectPage|to_Booking": {
                                 "entitySet": "Booking",
-                                "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                                "defaultLayoutTypeIfExternalNavigation": "ThreeColumnsEndExpanded",
                                 "component": {
                                     "name": "sap.suite.ui.generic.template.ObjectPage"
                                 }
